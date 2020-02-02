@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="social_buttons_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <ul class="nav justify-content-center" style="padding-top: 40px; ">
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html" style="color: white;">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white;">Men</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white;">Woman</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="collection.html"style="color: white;">Collection</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html"style="color: white;">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html"style="color: white;">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white;">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">or</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white;">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"style="color: white;">
+                  <span class="badge badge-pill badge-light">0</span>  
+                </a>
+            </li>
+        </ul>
+
+
+
+        <h2>Contact us</h2>
+        
+        <div class="container contact_container">
+            <div class="row">
+              <div class="col-md-6 col-sm-12">  
+                <form action="">
+                
+                  <label for="fullname">Full name<span class="required">*</span></label>
+                  <input type="text" id="fullName" name="fullname" placeholder="Your full name.." required>
+                
+                  <label for="phone">Phone<span class="required">*</span></label>
+                  <input type="text" id="phone" name="phone" placeholder="Your phone number.." required>
+
+                  <label for="email">Email</label>
+                  <input type="text" id="email" name="email" placeholder="Your email..">
+                
+                  <label for="subject">Subject</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                
+                  <button id="btnSend" onclick="sendContact()" class="btn btn-outline-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i> SEND</button>
+                
+                </form>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                   <div class="header"> 
+                        <i class="material-icons" style="font-size:30px; color: #ccac00;">house </i>
+                        <h4>CONTACT INFORMATION</h4>
+                    </div>
+                   <h4 class="space_top">OFFICE ADDRESS</h4>
+                   <h6 class="space_top">249 Ung Van Khiem Street, Binh Thanh Dist, HCM city</h6>
+                   <div class="header_email space_top"> 
+                    <i class="material-icons space_top" style="font-size:25px;color:#ccac00;">email</i>
+                    <h6 class="space_top">jewelry@info.com</h6>
+                </div> 
+                <h5 class="space_top">FOLLOW US ON</h5>
+                <div class="social_images space_top">
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                      </ul>
+                 </div>
+            </div>
+         </div>
+     </div>  
+         <div class="container-fluid">
+             <div class="row">
+                 <div class="col-md-12">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.1609210541656!2d34.77663398535481!3d32.064896027260446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b7d63e033d9%3A0xa3eec40497654c9b!2z15DXl9eTINeU16LXnSAzNSwg16rXnCDXkNeR15nXkSDXmdek15U!5e0!3m2!1siw!2sil!4v1580383355742!5m2!1siw!2sil" width="100%vw" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                 </div>
+             </div>
+         </div>
+         
+         <!-- Footer -->
+         <div class="container-fluid">
+             <div class="row space_newsletter">
+                 <div class="col-sm-12 offset-md-3 col-md-6 center_text white_text">
+                     <h4>NEWSLETTER</h4>
+                     <h6>We promise only send the good things</h6>
+                     <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-secondary" id="btnNewsLetter" onclick="sendNewsLetter()" style="background-color:#ccac00;" type="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        </div>
+                        <input type="text" id="inputNewsLetter" class="form-control" placeholder="YOUR EMAIL.." required>
+                      </div>  
+                 </div>
+             </div>
+             <div class="row space_newsletter">
+                 <div class="col-sm-12 col-md-12">
+                    <div id="footer">
+                        <ul class="footer_ul">
+                            <li>&copy; Powered by Hackthon group - All rights Reserved</li>
+                            <li><img height="30" src="https://shoplineimg.com/assets/footer/card_visa.png"/></li>
+                            <li><img height="30" src="https://shoplineimg.com/assets/footer/card_master.png"/></li>
+                            <li><img height="30" src="https://shoplineimg.com/assets/footer/card_paypal.png"/></li>
+                        </ul>  
+                    </div>
+                 </div>
+             </div>
+         </div>
+      
+        <script src="script.js" async defer></script>
+    </body>
+</html>

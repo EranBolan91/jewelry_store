@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body onload="init()">
+        <section id="bg">
+            <ul class="nav justify-content-center" style="padding-top: 40px; ">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html" style="color: white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="color: white;">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="color: white;">Woman</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collection.html"style="color: white;">Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"style="color: white;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"style="color: white;">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="color: white;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">or</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="color: white;">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="color: white;">
+                          <span class="badge badge-pill badge-light">0</span>  
+                        </a>
+                    </li>
+                </ul>
+         </section>
+         
+         <div class="container-fluid">
+             <div class="row">
+                 <div class="col-md-3">
+                    <section id="menu">
+                        <h4>Prices</h4> 
+                        <ul style="list-style-type: none;">
+                           <li> <label class="container">100$ ~ 1000$
+                                <input type="checkbox" onclick="filter()">
+                                <span class="checkmark"></span>
+                            </li>
+                            <li> <label class="container">1000$ ~ 4000$
+                                <input type="checkbox" onclick="filter()">
+                                <span class="checkmark"></span>
+                            </li>
+                            <li> <label class="container">4000$ ~ 7000$
+                                <input type="checkbox" onclick="filter()">
+                                <span class="checkmark"></span>
+                            </li>
+                            <li> <label class="container">7000$ ~ 10000$
+                                <input type="checkbox" onclick="filter()">
+                                <span class="checkmark"></span>
+                            </li>
+                        </ul>
+
+                        <h4>Gender</h4> 
+                        <ul style="list-style-type: none;">
+                           <li> <label class="container">Men's 
+                                <input type="checkbox" onchange="filter('man')">
+                                <span class="checkmark"></span>
+                                </label>
+                            </li>
+                            <li> <label class="container">Ladies
+                                <input type="checkbox" onclick="filter('woman')">
+                                <span class="checkmark"></span>
+                            </li>
+                        </ul>
+
+                        <h4>TYPE</h4> 
+                        <ul style="list-style-type: none;">
+                           <li> <label class="container">Ring
+                                <input type="checkbox" onclick="filter('ring')">
+                                <span class="checkmark"></span>
+                            </li>
+                            <li> <label class="container">Necklace
+                                <input type="checkbox" onclick="filter('necklace')">
+                                <span class="checkmark"></span>
+                            </li>
+                            <li> <label class="container">Earrings
+                                <input type="checkbox" onclick="filter('earrings')">
+                                <span class="checkmark"></span>
+                            </li>
+                        </ul>
+                    </section>
+                 </div>
+                 <div class="col-md-9" id="collection_content">
+         
+                 </div>
+             </div>
+         </div>
+
+         <div class="row space_newsletter">
+            <div class="col-sm-12 col-md-12">
+               <div id="footer">
+                   <ul class="footer_ul">
+                       <li>&copy; Powered by Hackthon group - All rights Reserved</li>
+                       <li><img height="30" src="https://shoplineimg.com/assets/footer/card_visa.png"/></li>
+                       <li><img height="30" src="https://shoplineimg.com/assets/footer/card_master.png"/></li>
+                       <li><img height="30" src="https://shoplineimg.com/assets/footer/card_paypal.png"/></li>
+                   </ul>  
+               </div>
+            </div>
+        </div>
+        <script src="jewelry_list.js" async defer></script>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,300 @@
+/* Contact Style - Start */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Some padding */ 
+    border: 1px solid #ccac00; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  
+  /* Add a background color and some padding around the form */
+  .contact_container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.header_email{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.space_top{
+    margin-top: 20px;
+}
+
+.space_newsletter{
+    margin-top: 60px;
+}
+
+#footer{
+    background-color: #1c1c1c;
+    padding: 15px;
+    text-align: right;
+    justify-items: center;
+    color:white;
+}
+
+.footer_ul > li{
+    display: inline;
+    align-self: right;
+}
+
+.required {
+    color: red;
+}
+
+.center_text{
+    text-align: center;
+}
+
+.white_text{
+    color: white;
+}
+
+body{
+    background-color: black !important;
+}
+
+/*---------------------- Contact Style - END ------------------------*/
+
+/* ----------- Collection Style - Start------------------------ */
+
+#menu{
+	color: white;
+}
+
+#collection_content{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	color: white;
+	margin-top: 50px;
+}
+
+div > img:hover{
+	transform: scale(1.3);
+}
+
+.item_box{
+	margin: 8px;
+}
+
+.hero_collection{
+    width: 100%;
+    height: 300px;
+    background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    position: relative;
+}
+
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 15px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+	background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+	background-color: #ccac00;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+	display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+
+
+/*------------- Index(home page) style - start --------------------- */
+
+#bg{
+	background-image: url(Pictures/bgjewlery.jpg);
+	background-size: 100%;
+}
+#mm{
+	z-index: 1000;
+	color: #ccac00;
+	text-align: center; 
+	padding-top: 40px;
+}
+#btn{
+	display: flex;
+	margin:auto;
+	width: 200px;
+	justify-content: center;
+	border-color: #ccac00;
+	border-radius: 25px;
+	color: yellow;
+}
+.parallax {
+  /* The image used */
+  background-image: url(Pictures/bestpic.jpg);
+  /* Set a specific height */
+  height: 100%; 
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h2 {
+	text-align: center;
+	color: white;
+}
+#earsection{
+	grid-area: ear;
+	border-radius: 10px;
+	text-align: center;
+	margin-left:200px ;
+	margin-right:200px;
+	margin-bottom:10px;
+	padding-bottom: 20px; 
+}
+#necksection{
+	grid-area: neck;
+	border-radius: 10px;
+	text-align: center;
+	margin-left:200px ;
+	margin-right:200px;
+	margin-bottom:10px;
+	padding-bottom: 20px; 
+}
+#ringsection{
+	grid-area: ring;
+	border-radius: 10px;
+	text-align: center;
+	margin-left:200px ;
+	margin-right:200px;
+	margin-bottom:10px;
+	padding-bottom: 20px; 
+}
+#earpic{
+	width: 400px;
+	height:200px;
+	border-radius: 15px;
+}
+h3{
+	color: #ccac00;
+}
+#neckpic{
+	width: 400px;
+	height:200px;
+	border-radius: 15px;
+}
+#ringpic{
+	width: 400px;
+	height:200px;
+	border-radius: 15px;
+}
+#userpic{
+	display: flex;
+	margin:auto;
+	width: 150px;
+	height: 150px;
+}
+#cards{
+	display: flex;
+	flex-direction: row;
+	margin:auto;
+	justify-content: center;
+}
+#part3{
+	background-image: url(Pictures/bg3.jpg);
+	background-size: 100%; 
+}
+
+/* ------------ Index (home) style ends ------------- */
+
+
+/* ------------ About style start --------------- */
+
+.social-link {
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #666;
+	border-radius: 50%;
+	transition: all 0.3s;
+	font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+	background: #ddd;
+	text-decoration: none;
+	color: #555;
+  }
+  
+  .block1{
+	background-color: black;
+  }
+
+  /* ------------ About style Ends --------------- */
