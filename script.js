@@ -166,7 +166,7 @@ function showCart(){
         cart_drop_down.appendChild(img);
 
         let h5 = document.createElement('h5');
-        h5.innerText = cart_items[i].name;
+        h5.innerText = cart_items[i].name + " 1X " + cart_items[i].price ;
         h5.style.fontSize = "14px"
         h5.setAttribute('id',cart_items[i].id);
         cart_drop_down.appendChild(h5);
