@@ -7,6 +7,7 @@ let subject = document.getElementById('subject');
 let btnSend = document.getElementById('btnSend');
 let inputNewsLetter = document.getElementById('inputNewsLetter');
 let checkBox = document.getElementsByTagName('input');
+let jewelryCountBagde = document.getElementById('itemsJewelry');
 
 
 function sendContact(){
@@ -41,25 +42,25 @@ function init(){
     for (let i = 0; i < jewelry.length; i++) {
                 createJewelBox(jewelry[i],i);
     }
+    console.log(jewelry);
+    
 }
 
 let menuList = document.querySelectorAll("input");
-
-console.log(menuList[0].checked);
-console.log(menuList[0].ontoggle);
-
+let root = document.querySelector("#collection_content");
 
 function filter(filter){
     switch(filter){
         case 'man':
-         
-            for (let i = 0; i < jewelry.length; i++) {
-                if(jewelry[i].gender == 'man'){
-                    createJewelBox(jewelry[i],i);
-                }
+           removeItemsFromRoot(root);
+        for (let i = 0; i < jewelry.length; i++) {
+            if(jewelry[i].gender == 'man'){
+                createJewelBox(jewelry[i],i);
             }
+        }
         break;
         case 'woman':
+            removeItemsFromRoot(root);
         for (let i = 0; i < jewelry.length; i++) {
             if(jewelry[i].gender == 'woman'){
                 createJewelBox(jewelry[i],i);
@@ -67,6 +68,7 @@ function filter(filter){
         }
         break;
         case 'ring':
+            removeItemsFromRoot(root);
         for (let i = 0; i < jewelry.length; i++) {
             if(jewelry[i].type == 'ring'){
                 createJewelBox(jewelry[i],i);
@@ -74,6 +76,7 @@ function filter(filter){
         }
         break;
         case 'necklace':
+            removeItemsFromRoot(root);
         for (let i = 0; i < jewelry.length; i++) {
             if(jewelry[i].type == 'necklace'){
                 createJewelBox(jewelry[i],i);
@@ -81,6 +84,7 @@ function filter(filter){
         }
         break;
         case 'earrings':
+            removeItemsFromRoot(root);
         for (let i = 0; i < jewelry.length; i++) {
             if(jewelry[i].type == 'earrings'){
                 createJewelBox(jewelry[i],i);
@@ -90,7 +94,14 @@ function filter(filter){
     }
 }
 
-let root = document.querySelector("#collection_content");
+function removeItemsFromRoot(parent){
+    let child = parent.lastElementChild;  
+    while (child) { 
+        parent.removeChild(child); 
+        child = parent.lastElementChild; 
+    }
+}
+
 function createJewelBox(jewelryObj,index){
 
          let itemBox = document.createElement('div');
@@ -117,8 +128,8 @@ function createJewelBox(jewelryObj,index){
          itemBox.appendChild(h5);
 
          let button = document.createElement('button');
-         button.innerText = "BUY";
-         button.classList.add('buy_button');
+         button.innerText = "ADD CART";
+         button.classList.add('btn');
          button.setAttribute('id',index);
          button.addEventListener('click', function(event){
             addToCart(event);  
@@ -126,9 +137,50 @@ function createJewelBox(jewelryObj,index){
          itemBox.appendChild(button);        
 }
 
-
+let cart_items = []
 function addToCart(event){
+
+    let idItem = event.target.id;
+    cart_items.push(jewelry[idItem]);
+    jewelryCountBagde.innerText = cart_items.length; 
+    
+}//count how many items in the cart and display in the white bagde
+
+
+
+//-------------- Cart mouse over ------------
+//need to check how to remove old elements!!!
+function showCart(){
+    let cart_drop_down = document.getElementsByClassName("cart-dropdown")[0];
+        removeItemsFromRoot(cart_drop_down);
+        let totalsum = 0;
+        console.log(cart_items);
+      for (let i = 0; i < cart_items.length; i++) {
+          console.log("Show cart: " + JSON.stringify(cart_items[i]));
+          
+        let img = document.createElement('img');
+        img.setAttribute("src", cart_items[i].image);
+        img.setAttribute("width", "70");
+        img.setAttribute("height", "70");
+        img.setAttribute('id',cart_items[i].id);
+        cart_drop_down.appendChild(img);
+
+        let h5 = document.createElement('h5');
+        h5.innerText = cart_items[i].name;
+        h5.style.fontSize = "14px"
+        h5.setAttribute('id',cart_items[i].id);
+        cart_drop_down.appendChild(h5);
+        totalsum = totalsum + cart_items[i].price;
         
-        console.log(event.getAttributes);
-        
+        if(i == cart_items.length-1){
+            let hr = document.createElement('hr');
+            hr.setAttribute('height',"5px");
+            cart_drop_down.appendChild(hr);
+
+            let h5 = document.createElement('h5');
+            h5.style.color = "green";
+            h5.innerText ="total mount: " +  totalsum;
+            cart_drop_down.appendChild(h5);
+        } 
+      }
 }

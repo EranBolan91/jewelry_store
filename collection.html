@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body onload="init()">
-        <section id="bg">
+        
             <ul class="nav justify-content-center" style="padding-top: 40px; ">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html" style="color: white;">Home</a>
@@ -40,12 +40,16 @@
                         <a class="nav-link" href="#"style="color: white;">Register</a>
                     </li>
                     <li class="nav-item">
+                      <div class="cart-button" id="cart_button" > 
                         <a class="nav-link" href="#"style="color: white;">
-                          <span class="badge badge-pill badge-light">0</span>  
+                          <span id="itemsJewelry" class="badge badge-pill badge-light" onmouseover="showCart()">0</span>  
                         </a>
+                        <div class="cart-dropdown">
+
+                         </div>
+                        </div>
                     </li>
                 </ul>
-         </section>
          
          <div class="container-fluid">
              <div class="row">
@@ -53,19 +57,19 @@
                     <section id="menu">
                         <h4>Prices</h4> 
                         <ul style="list-style-type: none;">
-                           <li> <label class="container">100$ ~ 1000$
+                           <li> <label class="container_check">100$ ~ 1000$
                                 <input type="checkbox" onclick="filter()">
                                 <span class="checkmark"></span>
                             </li>
-                            <li> <label class="container">1000$ ~ 4000$
+                            <li> <label class="container_check">1000$ ~ 4000$
                                 <input type="checkbox" onclick="filter()">
                                 <span class="checkmark"></span>
                             </li>
-                            <li> <label class="container">4000$ ~ 7000$
+                            <li> <label class="container_check">4000$ ~ 7000$
                                 <input type="checkbox" onclick="filter()">
                                 <span class="checkmark"></span>
                             </li>
-                            <li> <label class="container">7000$ ~ 10000$
+                            <li> <label class="container_check">7000$ ~ 10000$
                                 <input type="checkbox" onclick="filter()">
                                 <span class="checkmark"></span>
                             </li>
@@ -73,12 +77,12 @@
 
                         <h4>Gender</h4> 
                         <ul style="list-style-type: none;">
-                           <li> <label class="container">Men's 
+                           <li> <label class="container_check">Men's 
                                 <input type="checkbox" onchange="filter('man')">
                                 <span class="checkmark"></span>
                                 </label>
                             </li>
-                            <li> <label class="container">Ladies
+                            <li> <label class="container_check">Ladies
                                 <input type="checkbox" onclick="filter('woman')">
                                 <span class="checkmark"></span>
                             </li>
@@ -86,15 +90,15 @@
 
                         <h4>TYPE</h4> 
                         <ul style="list-style-type: none;">
-                           <li> <label class="container">Ring
+                           <li> <label class="container_check">Ring
                                 <input type="checkbox" onclick="filter('ring')">
                                 <span class="checkmark"></span>
                             </li>
-                            <li> <label class="container">Necklace
+                            <li> <label class="container_check">Necklace
                                 <input type="checkbox" onclick="filter('necklace')">
                                 <span class="checkmark"></span>
                             </li>
-                            <li> <label class="container">Earrings
+                            <li> <label class="container_check">Earrings
                                 <input type="checkbox" onclick="filter('earrings')">
                                 <span class="checkmark"></span>
                             </li>
